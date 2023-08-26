@@ -10,10 +10,10 @@ const Nav = () => {
     paddingTop: "5px",
   };
 
-  const barStyle = {
-    fontSize: "20px",
-    display: "none",
-  };
+  // const barStyle = {
+  //   fontSize: "20px",
+  //   display: "none",
+  // };
 
   return (
     <div className={styles.parent_div}>
@@ -22,6 +22,7 @@ const Nav = () => {
           {/* <h2>Exclusive</h2> */}
           <img src="./e-images/xclusive.jpeg" alt="" />
         </div>
+          <div className={styles.navmiddle_end}>
 
         <div className={styles.nav_middle}>
           <ul>
@@ -58,8 +59,12 @@ const Nav = () => {
           <img src="./e-images/Cart1 with buy.svg" alt="" id="myBtn" />
           <img src="./e-images/user.svg" alt="" />
           <BsPlusCircleFill fontSize={"25px"} />
-          <FaBars style={barStyle} />
+          {/* <FaBars style={barStyle} /> */}
+        
         </div>
+        
+          </div>
+          <FaBars className={styles.Bars} />
       </nav>
     </div>
   );

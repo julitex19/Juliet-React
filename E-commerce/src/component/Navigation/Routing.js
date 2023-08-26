@@ -11,6 +11,7 @@ import Error from '../Error/Error'
 import HeroPage from '../Wishlist/Hero'
 import Cart from '../Cart/Cart'
 import Shop from '../Shop/Shop'
+import LoginPage from '../Login/Login'
 
 
 const Routing = () => {
@@ -28,6 +29,7 @@ const Routing = () => {
             <Route  path='/HeroPage' element ={<HeroPage />}/>
             <Route path='/Cart' element ={<Cart />} />
             <Route  path='/Shop' element ={<Shop />}/>
+            <Route path='/Login' element ={<LoginPage />}/>
           </Routes>
         <Footer />
       </Router>

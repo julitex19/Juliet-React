@@ -9,7 +9,7 @@ function Cart() {
     <div>
       <div className={styles.modal_item}>
         <div className={styles.spann}>
-          <span>Home / </span>
+          <span >Home / </span>
           <span>Cart</span>
         </div>
 

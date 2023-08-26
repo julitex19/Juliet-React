@@ -1,96 +1,120 @@
-// import React from 'react'
-// import styles from './Sign-Up.module.css'
+import React, { useState } from "react";
+import styles from "./Sign-Up.module.css";
+import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
-// function SignUp() {
-//   return (
-//     <div className={styles.SignUp}>
-//       <div className={styles.left}>
-//         <img src="./e-images/phonebag.svg" alt="" />
-//       </div>
-//       <div className={styles.right}>
+function SignUp() {
+  const [Data, setData] = useState({
+    fullName: "",
+    email: "",
+    password: "",
+  });
+  // const [fullName, setFullName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
 
-//       </div>
+  const changeHandler = (e) => {
+    const { name, value } = e.target;
+    setData({ ...Data, [name]: value });
+
+    // if (name === "email") {
+    //   setEmail(value);
+    //   console.log(value);
+    // }
+
+    // if (name === "fullName") {
+    //   setFullName(value);
+    //   console.log(value);
+    // }
+
+    // if (name === "password") {
+    //   setPassword(value);
+    //   console.log(value);
+    // }
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const { email, password, fullName } = Data;
+    if (email === "" || password === "" || fullName === " ") {
+      toast.error("Please fill all the fields!");
+    }
+    console.log(Data);
+    // const datavalues = {email, password, fullName}
+    // console.log(datavalues)
+  };
+  const { email, password, fullName } = Data;
+  return (
+    <div className={styles.SignUp}>
+      <div className={styles.left}>
+        <img src="./e-images/phonebag.svg" alt="" />
+      </div>
+      <div className={styles.wrapper}>
+        <div className={styles.right}>
+          <h2>Create an Account</h2>
+          <p>Enter your details below</p>
+          {/* <form> */}
+
+          <div className={styles.Sign_upp}>
+            <input
+              type="text"
+              id="Name"
+              name="fullName"
+              placeholder="FullName"
+              value={fullName}
+              onChange={changeHandler}
+            />
+          </div>
+          <div>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email or Phone Number"
+              value={email}
+              onChange={changeHandler}
+            />
+          </div>
+          <div>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              value={password}
+              onChange={changeHandler}
+            />
+          </div>
+          <div className={styles.btn}>
+            <button type="submit" onClick={submitHandler}>
+              Sign Up
+            </button>
+          </div>
+          <div className={styles.google}>
+            <button type="submit">
+              {" "}
+              <img src="./e-images/Google-signup.svg" alt="" />
+              Sign up with Google
+            </button>
+          </div>
+          <div className={styles.link}>
+            <p>Already have account?</p>
+            <Link to="/Login">Log in</Link>
+          </div>
+          {/* </form> */}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default SignUp;
+
+//
+
+//
 //     </div>
 //   )
 // }
 
 // export default SignUp
-
-
-import React, { useState } from 'react';
-
-const SignUpForm = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // You can perform form validation and submit data to a server here
-    console.log('Form submitted:', formData);
-  };
-
-  return (
-    <div>
-      <h2>Sign Up</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="firstName">First Name:</label>
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            value={formData.firstName}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="lastName">Last Name:</label>
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            value={formData.lastName}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <button type="submit">Sign Up</button>
-        </div>
-      </form>
-    </div>
-  );
-};
-
-export default SignUpForm;

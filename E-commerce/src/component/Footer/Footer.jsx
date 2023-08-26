@@ -38,8 +38,11 @@ const Footer = () => {
             <h4>Account</h4>
             <ul>
               <li><a href="/">My Account</a></li>
-              <li><a href="/">Login / Register</a></li>
-             
+
+              <li>
+                <Link to='/Login'>Login / Register</Link>
+              </li>
+
               <li>
               <Link to='/Cart'>Cart</Link>
               </li>
