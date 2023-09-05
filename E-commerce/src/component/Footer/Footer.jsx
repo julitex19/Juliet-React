@@ -37,7 +37,9 @@ const Footer = () => {
           <div className={styles.foot_flexed3}>
             <h4>Account</h4>
             <ul>
-              <li><a href="/">My Account</a></li>
+              <li>
+              <Link to='/Account'>My Account</Link>
+              </li>
 
               <li>
                 <Link to='/Login'>Login / Register</Link>

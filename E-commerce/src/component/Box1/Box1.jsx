@@ -18,12 +18,13 @@ const Box1 = ({Items}) => {
               <span>Add To Cart</span>
             </div>
             <div className={styles.position}>
+            <button>New</button>
               <img src="./e-images/Ellipse 13.png" alt="" className={styles.elipse} />
               <img src="./e-images/eye.svg" alt="" className={styles.eye} />
             </div>
           </div>
           <div className={styles.price}>
-            <p class="title">{title}</p>
+            <p>{title}</p>
             <div className={styles.dollar}>
               <span>{price}</span>
             </div>

@@ -1,0 +1,34 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.span_flexed {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: center;
+  margin: 70px 100px;
+}
+
+.span_flexed span {
+  font-size: 14px;
+}
+
+.spann {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+span:hover {
+  color: gray;
+}
+.spans2 {
+  color: #db4444;
+}
+.spans {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}

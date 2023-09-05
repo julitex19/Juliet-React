@@ -2,7 +2,11 @@ import React from "react";
 import styles from "./About.module.css";
 import AboutDirectors from "../AboutDirectors/AboutDirectors";
 import { Info } from "../AboutDirectors/Data2";
-import AboutBox from "../AboutBox/AboutBox";
+import AboutBox from "../AboutBox/AboutBox"
+import { AbtBox } from "../AboutBox/Data3";
+import AboutDelivery from "../AboutDelivery/AboutDelivery";
+import { AbtDeliv } from '../AboutDelivery/Data4';
+import AboutDot from "../AboutDot/AboutDot";
 
 function About() {
   return (
@@ -34,13 +38,25 @@ function About() {
         </div>
       </div>
 
-    <AboutBox />
+      <div className={styles.AboutBox_outer}>
+  {AbtBox && AbtBox.map((items) => {
+    return <AboutBox key={items.id} box={items} />;
+  })}
+</div>
+
 
       <div className={styles.container}>
       {Info && Info.map((items)=>{
            return <AboutDirectors key={items.id} details={items} />
       })}
   </div>
+  <AboutDot />
+
+  <div className={styles.AboutBox_outerD}>
+  {AbtDeliv && AbtDeliv.map((items) => {
+    return <AboutDelivery key={items.id} icons={items} />;
+  })}
+</div>
     </div>
   );
 }

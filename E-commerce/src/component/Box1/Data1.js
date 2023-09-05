@@ -4,6 +4,7 @@ export const Product1 = [
       img: "./e-images/gucci-bag.png",
       title: "ASUS FHD Gaming Laptop",
       price: "$960",
+      btn: ""
     },
   
     {

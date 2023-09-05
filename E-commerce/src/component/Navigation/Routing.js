@@ -12,7 +12,8 @@ import HeroPage from '../Wishlist/Hero'
 import Cart from '../Cart/Cart'
 import Shop from '../Shop/Shop'
 import LoginPage from '../Login/Login'
-
+import Checkout from '../Checkout/Checkout'
+import Account from '../Account/Account'
 
 const Routing = () => {
   return (
@@ -30,6 +31,8 @@ const Routing = () => {
             <Route path='/Cart' element ={<Cart />} />
             <Route  path='/Shop' element ={<Shop />}/>
             <Route path='/Login' element ={<LoginPage />}/>
+            <Route path='/Checkout' element ={<Checkout />}/>
+            <Route path='/Account' element ={<Account />}/>
           </Routes>
         <Footer />
       </Router>
