@@ -6,7 +6,7 @@ const percentMaped = {
   Percentage:Percentage,
 };
 
-const Box = ({products}) => {
+const Box = ({ products }) => {
   const {img, title, price, oldPrice, percent} = products
   const PercentComp = percentMaped[percent];
   return (

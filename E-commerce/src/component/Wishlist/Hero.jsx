@@ -1,13 +1,17 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import styles from './Hero.module.css'
 import Box from '../Box/box'
 import Box1 from '../Box1/Box1'
 import { Product } from '../Box/Data'
 import { Product1 } from '../Box1/Data1'
+import { GlobalContext } from '../../context'
 
 
 
 const HeroPage = () => {
+
+const datavar = useContext(GlobalContext)
+console.log(datavar)
 
   return (
     <div>
@@ -20,7 +24,7 @@ const HeroPage = () => {
 
 <div className={styles.wishlist}>
       {Product && Product.map((items)=>{
-        return  <Box key={items.id} products={items} />
+         return  <Box key={items.id} products={items} />
       })}
 </div>
       

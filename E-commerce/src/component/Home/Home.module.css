@@ -1,0 +1,53 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 0;
+    gap: 30px;
+}
+
+.black_container{
+    background-color: black;
+    height: 260px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 40px 60px;
+    min-width: 800px;
+}
+
+
+.apple{
+    font-size: 40px;
+    color: white;
+}
+
+.inner_flexed h1{
+    font-size: 50px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 15px 0;
+}
+
+.Apple_flexed{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.Apple_flexed p{
+    color: white;
+    font-size: 18px;
+}
+
+.link{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+.arrow{
+    font-size: 22px;
+}
