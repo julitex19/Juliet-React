@@ -4,16 +4,12 @@ import { FaBars } from "react-icons/fa";
 import styles from "./Nav.module.css";
 import { Link } from "react-router-dom";
 
-const Nav = () => {
+const Nav = ({Favourite, BuyCart, User}) => {
   const searchStyle = {
     fontSize: "22px",
     paddingTop: "5px",
   };
 
-  // const barStyle = {
-  //   fontSize: "20px",
-  //   display: "none",
-  // };
 
   return (
     <div className={styles.parent_div}>
@@ -54,9 +50,11 @@ const Nav = () => {
           </div>
 
           <div className={styles.logos}>
-            <img src="./e-images/Vector.svg" alt="" />
-            <img src="./e-images/Cart1 with buy.svg" alt=""/>
-            <Link to="/Account"><img src="./e-images/user.svg" alt="" /></Link>
+          {Favourite && <Favourite />}
+          {BuyCart && <BuyCart />}
+          {User && <User />}
+            
+            
             <BsPlusCircleFill fontSize={"25px"} />
             {/* <FaBars style={barStyle} /> */}
           </div>
