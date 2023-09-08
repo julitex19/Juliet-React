@@ -32,3 +32,11 @@ span:hover {
   align-items: center;
   gap: 2px;
 }
+
+
+.right{
+  max-width: 940px;
+  min-height: 400px;
+  padding: 30px;
+  box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+}

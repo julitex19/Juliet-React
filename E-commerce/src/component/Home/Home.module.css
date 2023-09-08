@@ -48,5 +48,69 @@
 }
 
 .arrow{
-    font-size: 22px;
+    font-size: 25px;
+    font-weight: 900;
 }
+
+
+
+.wrapper{
+    margin:  70px 100px 0 100px ;
+
+}
+
+  
+  .btn {
+    border: 1px solid gray;
+    width: 25px;
+    min-height: 60px;
+    font-size: 16px;
+    font-family: poppins;
+    font-weight: 600;
+    background-color: #db4444;
+    border-color: gray;
+    border-radius: 6px;
+    border: none;
+    margin-top: 30px;
+  }
+  
+  .intro2 h4 {
+    font-weight: 500;
+    font-size: 18px;
+    padding-top: 22px;
+    color: #db4444;
+  }
+
+  .intro2_flex {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .arrow_flexed{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .contain {
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #F5F5F5;
+  }
+
+  .flash{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+  }
+
+  .flash h2{
+    font-size: 40px;
+    font-weight: 500;
+  }
