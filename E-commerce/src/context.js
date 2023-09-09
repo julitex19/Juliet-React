@@ -1,34 +1,25 @@
-import React, {useState} from 'react'
+import React, { useEffect, useState } from "react";
 const GlobalContext = React.createContext();
 
+const Provider = ({ children }) => {
+  const [products, setProducts] = useState();
 
-const  Provider =({children} )=> {
+  useEffect(() => {
+    const productApi = () => {
+      fetch("https://fakestoreapi.com/products")
+        .then((res) => res.json())
+        .then((data) => setProducts(data));
+    };
+    productApi();
+  }, []);
 
-//  const ApiCall = async()=>{
-//     await fetch('http://localhost:3004/product')
+  console.log(products);
 
-//  }
-
-const [products, setProducts] = useState();
-
-// function to get api data
- const productApi = ()=> {
-  fetch("https://fakestoreapi.com/products")
-  .then((res) => res.json())
-  .then((data) => setProducts(data));
-}
-
-
-// object to store and release all values in context.js
-const value = {
-  products :products,
-  productApi,
-  // ApiCall
-}
+  // object to store and release all values in context.js
   return (
     // provider component to release all values in context.js
-    <GlobalContext.Provider value={value}>{children}</GlobalContext.Provider>
-  )
-}
+    <GlobalContext.Provider value={products}>{children}</GlobalContext.Provider>
+  );
+};
 
-export {GlobalContext, Provider} 
+export { GlobalContext, Provider };
