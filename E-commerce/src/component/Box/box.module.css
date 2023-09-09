@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-content: center;
     gap: 25px;
+    width: 300px;
   }
   
   .product_box {

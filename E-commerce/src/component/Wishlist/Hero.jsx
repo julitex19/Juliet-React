@@ -1,14 +1,21 @@
-import React, {useContext} from 'react'
+import React, {useContext, useEffect} from 'react'
 import styles from './Hero.module.css'
 import Box from '../Box/box'
 import Box1 from '../Box1/Box1'
-import { Product } from '../Box/Data'
+// import { Product } from '../Box/Data'
 import { Product1 } from '../Box1/Data1'
 import { GlobalContext } from '../../context'
 
 
 
 const HeroPage = () => {
+  // destructuring products and productApi function from context.js's global context using use context hook
+  const {products, productApi} = useContext(GlobalContext)
+  useEffect(() => {
+    // axios
+    productApi()
+    
+  }, );
 
 const datavar = useContext(GlobalContext)
 console.log(datavar)
@@ -23,7 +30,7 @@ console.log(datavar)
       </div>
 
 <div className={styles.wishlist}>
-      {Product && Product.map((items)=>{
+      {products && products.map((items)=>{
          return  <Box key={items.id} products={items} />
       })}
 </div>

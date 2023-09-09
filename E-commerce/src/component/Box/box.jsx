@@ -7,14 +7,14 @@ const percentMaped = {
 };
 
 const Box = ({ products }) => {
-  const {img, title, price, oldPrice, percent} = products
+  const {image, title, price, oldPrice, percent} = products
   const PercentComp = percentMaped[percent];
   return (
     <div className={styles.wishlist}>
 
       <div className={styles.product}>
           <div className={styles.product_box}>
-            <img src={img} alt="" />
+            <img src={image} alt="" />
             <div className={styles.cart}>
               <img src="./e-images/white-cart.svg" alt="" />
               <span>Add To Cart</span>
@@ -29,7 +29,7 @@ const Box = ({ products }) => {
           <div className={styles.price}>
             <p>{title}</p>
             <div className={styles.dollar}>
-              <span>{price}</span>
+              <span>${price}</span>
               <s>{oldPrice}</s>
             </div>
           </div>
@@ -43,69 +43,107 @@ const Box = ({ products }) => {
 
 export default Box
 
+ 
 
-// {/* 
 
-//         <div className={styles.product}>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React from 'react'
+// import styles from "./box.module.css"
+// import Percentage from './Percentage';
+
+// const percentMaped = {
+//   Percentage:Percentage,
+// };
+
+// const Box = ({ products }) => {
+//   const {img, title, price, oldPrice, percent} = products
+//   const PercentComp = percentMaped[percent];
+//   return (
+//     <div className={styles.wishlist}>
+
+//       <div className={styles.product}>
 //           <div className={styles.product_box}>
-//             <img src="./e-images/speaker.png" alt="" />
+//             <img src={img} alt="" />
 //             <div className={styles.cart}>
 //               <img src="./e-images/white-cart.svg" alt="" />
 //               <span>Add To Cart</span>
 //             </div>
 //             <div className={styles.position}>
-//               <img src="./e-images/Ellipse 13.png" alt="" className={styles.elipse} />
-//               <img src="./e-images/icon-delete.svg" alt="" className={styles.delete} />
+//             {PercentComp && <PercentComp />}
+//             <img src="./e-images/Ellipse 13.png" alt="" className={styles.elipse} />
+//               <img src="./e-images/icon-delete.svg" alt="" className={styles.delete}/>
 //             </div>
+          
 //           </div>
 //           <div className={styles.price}>
-//             <p>RGB liquid CPU Cooler</p>
+//             <p>{title}</p>
 //             <div className={styles.dollar}>
-//               <span>$1960</span>
+//               <span>{price}</span>
+//               <s>{oldPrice}</s>
 //             </div>
 //           </div>
 //         </div>
 
 
-//         <div className={styles.product}>
-//           <div className={styles.product_box}>
-//             <img src="./e-images/black-pad.png" alt="" />
-//             <div className={styles.cart}>
-//               <img src="./e-images/white-cart.svg" alt="" />
-//               <span>Add To Cart</span>
-//             </div>
-//             <div className={styles.position}>
-//               <img src="./e-images/Ellipse 13.png" alt="" className={styles.elipse} />
-//               <img src="./e-images/icon-delete.svg" alt="" className={styles.delete} />
-//             </div>
-//           </div>
-//           <div className={styles.price}>
-//             <p>GP11 Shooter USB Gamepad</p>
-//             <div className={styles.dollar}>
-//               <span>$550</span>
-//             </div>
-//           </div>
+
 //         </div>
+//   )
+// }
 
-
-//         <div className={styles.product}>
-//         <div className={styles.product_box}>
-//             <img src="./e-images/jacket.png" alt="" />
-//             <div className={styles.cart}>
-//               <img src="./e-images/white-cart.svg" alt="" />
-//               <span>Add To Cart</span>
-//             </div>
-//             <div className={styles.position}>
-//               <img src="./e-images/Ellipse 13.png" alt="" className={styles.elipse} />
-//               <img src="./e-images/icon-delete.svg" alt="" className={styles.delete} />
-//             </div>
-//           </div>
-//           <div className={styles.price}>
-//             <p>Quilted Satin Jacket</p>
-//             <div className={styles.dollar}>
-//               <span>$750</span>
-//             </div>
-//           </div>
-//         </div> */}
+// export default Box
 
  
