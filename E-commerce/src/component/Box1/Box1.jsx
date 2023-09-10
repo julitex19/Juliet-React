@@ -29,7 +29,7 @@ const Box1 = ({Items}) => {
               <span>{price}</span>
             </div>
           </div>
-          <div class="stars">
+          <div className="stars">
 
           <FaStar style={stars}/>
           <FaStar style={stars}/>
@@ -40,100 +40,6 @@ const Box1 = ({Items}) => {
             <span>(65)</span>
           </div>
         </div>
-
-       
-        {/* <div className={styles.product}>
-          <div className={styles.product_box}>
-            <img src="./e-images/tv.png" alt="" />
-            <div className={styles.cart}>
-              <img src="./e-images/white-cart.svg" alt="" />
-              <span>Add To Cart</span>
-            </div>
-            <div className={styles.position}>
-              <img src="./e-images/Ellipse 13.png" alt="" className={styles.elipse} />
-              <img src="./e-images/eye.svg" alt="" className={styles.eye}/>
-            </div>
-          </div>
-          <div className={styles.price}>
-            <p>IPS LCD Gaming Monitor</p>
-            <div className={styles.dollar}>
-              <span>$960</span>
-            </div>
-          </div>
-          <div class="stars">
-          <FaStar style={stars}/>
-          <FaStar style={stars}/>
-          <FaStar style={stars}/>
-          <FaStar style={stars}/>
-          <FaStar style={stars}/>
-
-            <span>(65)</span>
-          </div>
-        </div>
-
-           
-        <div className={styles.product}>
-          <div className={styles.product_box}>
-            <img src="./e-images/game-pad.png" alt="" />
-            <div className={styles.cart}>
-              <img src="./e-images/white-cart.svg" alt="" />
-              <span>Add To Cart</span>
-            </div>
-            <div className={styles.position}>
-              <button style = {newBtn}>New</button>
-              <img src="./e-images/Ellipse 13.png" alt="" className={styles.elipse}/>
-              <img src="./e-images/eye.svg" alt="" className={styles.eye} />
-            </div>
-          </div>
-          <div className={styles.price}>
-            <p>HAVIT HV-G92 Gamepad</p>
-            <div className={styles.dollar}>
-              <span>$960</span>
-            </div>
-          </div>
-          <div class="stars">
-
-          <FaStar style={stars}/>
-          <FaStar style={stars}/>
-          <FaStar style={stars}/>
-          <FaStar style={stars}/>
-          <FaStar style={stars}/>
-
-            <span>(65)</span>
-          </div>
-        </div>
-
-        
-        <div className={styles.product}>
-          <div className={styles.product_box}>
-            <img src="./e-images/keyboard.png" alt="" />
-            <div className={styles.cart}>
-              <img src="./e-images/white-cart.svg" alt="" />
-              <span>Add To Cart</span>
-            </div>
-            <div className={styles.position}>
-              <img src="./e-images/Ellipse 13.png" alt="" className={styles.elipse} />
-              <img src="./e-images/eye.svg" alt="" className={styles.eye} />
-            </div>
-          </div>
-          <div className={styles.price}>
-            <p>AK-900 Wired Keyboard</p>
-            <div className={styles.dollar}>
-              <span>$960</span>
-            </div>
-          </div>
-          <div class="stars">
-
-          <FaStar style={stars}/>
-          <FaStar style={stars}/>
-          <FaStar style={stars}/>
-          <FaStar style={stars}/>
-          <FaStar style={stars}/>
-          
-            <span>(65)</span>
-          </div>
-        </div> */}
-
 
     </div>
   )

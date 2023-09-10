@@ -4,10 +4,12 @@ import PictureSlide from "../PictureSlide/PictureSlide";
 import { BsApple, BsArrowRight, BsArrowLeft} from "react-icons/bs";
 import { Link } from "react-router-dom";
 import HomeUl from "../HomeUl/HomeUl";
+import Moment from "../Moment/Moment"
 
 const Home = () => {
   return (
-   <> <div className={styles.container}>
+   <> 
+   <div className={styles.container}>
    <HomeUl />
    
    <div className={styles.black_container}>
@@ -39,7 +41,7 @@ const Home = () => {
 
    <div className={styles.flash}>
     <h2>Flash Sales</h2>
-    <div>timer</div>
+   <div> <Moment /></div>
     <div className={styles.arrow_flexed}>
       <div className={styles.contain}><BsArrowLeft  className={styles.arrow}/></div>
       <div className={styles.contain}><BsArrowRight  className={styles.arrow}/></div>
