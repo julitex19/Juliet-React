@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import moment from 'moment';
+import styles from "./Moment.module.css"
 
 function Moment() {
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -28,12 +29,24 @@ function Moment() {
   }, []);
 
   return (
+    <>
     <div>
-      <p>   <span>Days</span> <span>ours</span>   <span>Minute</span> <span>Seconds</span></p>
+    <div className={styles.counter}>
+      <p>days</p>
+      <p>hours</p>
+      <p>minutes</p>
+      <p>seconds</p>
+      </div>
+      <div className={styles.timer}>
       <h1>
       {countdown.days} <span>:</span> {countdown.hours} <span>:</span> {countdown.minutes} <span>:</span> {countdown.seconds} 
       </h1>
+      </div>
     </div>
+     
+  
+
+    </>
   );
 }
 

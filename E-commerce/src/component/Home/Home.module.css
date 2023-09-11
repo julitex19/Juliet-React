@@ -109,8 +109,22 @@
     align-items: center;
     margin: 30px 0;
   }
+  .inner_flash{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
 
   .flash h2{
     font-size: 40px;
     font-weight: 500;
+  }
+
+  .AboutBox_outerD{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin: 80px 0;
   }

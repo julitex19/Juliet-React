@@ -9,28 +9,10 @@ function SignUp() {
     email: "",
     password: "",
   });
-  // const [fullName, setFullName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
 
   const changeHandler = (e) => {
     const { name, value } = e.target;
     setData({ ...Data, [name]: value });
-
-    // if (name === "email") {
-    //   setEmail(value);
-    //   console.log(value);
-    // }
-
-    // if (name === "fullName") {
-    //   setFullName(value);
-    //   console.log(value);
-    // }
-
-    // if (name === "password") {
-    //   setPassword(value);
-    //   console.log(value);
-    // }
   };
 
   const submitHandler = (e) => {
@@ -40,8 +22,6 @@ function SignUp() {
       toast.error("Please fill all the fields!");
     }
     console.log(Data);
-    // const datavalues = {email, password, fullName}
-    // console.log(datavalues)
   };
   const { email, password, fullName } = Data;
   return (
@@ -53,7 +33,6 @@ function SignUp() {
         <div className={styles.right}>
           <h2>Create an Account</h2>
           <p>Enter your details below</p>
-          {/* <form> */}
 
           <div className={styles.Sign_upp}>
             <input
@@ -101,7 +80,6 @@ function SignUp() {
             <p>Already have account?</p>
             <Link to="/Login">Log in</Link>
           </div>
-          {/* </form> */}
         </div>
       </div>
     </div>
@@ -109,12 +87,3 @@ function SignUp() {
 }
 
 export default SignUp;
-
-//
-
-//
-//     </div>
-//   )
-// }
-
-// export default SignUp

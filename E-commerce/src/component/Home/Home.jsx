@@ -4,7 +4,11 @@ import PictureSlide from "../PictureSlide/PictureSlide";
 import { BsApple, BsArrowRight, BsArrowLeft} from "react-icons/bs";
 import { Link } from "react-router-dom";
 import HomeUl from "../HomeUl/HomeUl";
-import Moment from "../Moment/Moment"
+import Moment from "../Moment./Moment";
+import AboutDelivery from "../AboutDelivery/AboutDelivery";
+import { AbtDeliv } from "../AboutDelivery/Data4";
+import Categories from "../Categories/Categories";
+
 
 const Home = () => {
   return (
@@ -40,15 +44,23 @@ const Home = () => {
    </div>
 
    <div className={styles.flash}>
-    <h2>Flash Sales</h2>
-   <div> <Moment /></div>
+   
+   <div className={styles.inner_flash}> 
+   <h2>Flash Sales</h2>
+    <Moment />
+    </div>
     <div className={styles.arrow_flexed}>
       <div className={styles.contain}><BsArrowLeft  className={styles.arrow}/></div>
       <div className={styles.contain}><BsArrowRight  className={styles.arrow}/></div>
     </div>
    </div>
 </div>
-
+<Categories />
+<div className={styles.AboutBox_outerD}>
+  {AbtDeliv && AbtDeliv.map((items) => {
+    return <AboutDelivery key={items.id} icons={items} />;
+  })}
+</div>
    </>
   );
 };
