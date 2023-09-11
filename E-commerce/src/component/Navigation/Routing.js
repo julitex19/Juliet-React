@@ -32,14 +32,13 @@ const Routing = () => {
               </Layout>
             }
           />
-          <Route
-            path="/Contact"
-            element={
-              <Layout>
-                <Contact />
-              </Layout>
-            }
+          <Route path="/Contact" element={
+            <Layout>
+              <Contact/>
+            </Layout>
+          }
           />
+         
           <Route
             path="/About"
             element={

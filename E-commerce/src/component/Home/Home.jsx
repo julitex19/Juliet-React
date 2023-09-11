@@ -8,6 +8,8 @@ import Moment from "../Moment./Moment";
 import AboutDelivery from "../AboutDelivery/AboutDelivery";
 import { AbtDeliv } from "../AboutDelivery/Data4";
 import Categories from "../Categories/Categories";
+import NewArrival from "../NewArrival/NewArrival";
+
 
 
 const Home = () => {
@@ -29,6 +31,7 @@ const Home = () => {
            <BsArrowRight  className={styles.arrow}/>
          </div>
        </Link>
+       
      </div>
      <PictureSlide />
    </div>
@@ -56,6 +59,7 @@ const Home = () => {
    </div>
 </div>
 <Categories />
+<NewArrival />
 <div className={styles.AboutBox_outerD}>
   {AbtDeliv && AbtDeliv.map((items) => {
     return <AboutDelivery key={items.id} icons={items} />;

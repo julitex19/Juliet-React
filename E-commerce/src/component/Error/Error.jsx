@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Error.module.css";
+import { Link } from "react-router-dom";
 
 function Error() {
   return (
@@ -13,7 +14,7 @@ function Error() {
         <h1>404 Not Found</h1>
 
         <div className={styles.error_btn}>
-          <button>Back To Homepage</button>
+          <Link to="/"><button>Back To Homepage</button></Link>
         </div>
       </div>
     </div>
