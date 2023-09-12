@@ -1,3 +1,160 @@
-.container{
-    display: flex;
+.container {
+ margin: 150px 100px;
 }
+
+.btn {
+    border: 1px solid gray;
+    width: 25px;
+    min-height: 50px;
+    font-size: 16px;
+    font-family: poppins;
+    font-weight: 600;
+    background-color: #db4444;
+    border-color: gray;
+    border-radius: 6px;
+    border: none;
+    margin-top: 30px;
+  }
+  
+  .intro2 h4 {
+    font-weight: 500;
+    font-size: 18px;
+    padding-top: 22px;
+    color: #db4444;
+  }
+
+
+  .intro2_flex {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .intro2 h1{
+    font-weight: 500;
+    margin: 25px 0;
+    font-size: 40px;
+  }
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.left{
+    position: relative;
+    width: 622px;
+    height: 585px;
+    border: 1px solid gray;
+    background-color: #0d0c0c;
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+
+.positioning {
+    position: absolute;
+    top: 67%;
+    left: 5%;
+  }
+  
+  .positioning h1 {
+    color: #fafafa;
+    font-weight: 400;
+    font-size: 35px;
+  }
+  
+  .positioning h4 {
+    color: #fafafa;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+.hat{
+    position: relative;
+    width: 620px;
+    height: 285px;
+    border: 1px solid gray;
+    background-color: #0d0c0c;
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
+    margin-bottom: 10px;
+
+}
+
+.hat img{
+    margin-left: 30%;
+}
+
+.positions {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+  }
+  
+  .positions h1 {
+    color: #fafafa;
+    font-weight: 400;
+    font-size: 30px;
+  }
+  
+  .positions h4 {
+    color: #fafafa;
+    font-weight: 400;
+    font-size: 15px;
+    margin: 10px 0;
+  }
+
+.perfume {
+  position: relative;
+  width: 290px;
+  height: 290px;
+  border: 1px solid gray;
+  background-color: #323232;
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+}
+
+.position {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+}
+
+.position h1 {
+  color: #fafafa;
+  font-weight: 400;
+}
+
+.position h4 {
+  color: #fafafa;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+
+.link p {
+  color: #fafafa;
+  font-size: 18px;
+}
+
+.link p:hover{
+    text-decoration: underline ;
+    color: gray;
+}
+
+.bottom_right{
+    display: flex;
+    gap: 40px;
+}
+
+
+
+

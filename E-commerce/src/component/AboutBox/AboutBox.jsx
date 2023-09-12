@@ -27,7 +27,9 @@ function AboutBox({ box }) {
           <h1>{texth1}</h1>
           <p>{textp}</p>
         </div>
+  
       </div>
+   
     </div>
   );
 }

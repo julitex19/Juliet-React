@@ -1,6 +1,11 @@
 {
     "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
+      { "id": 1, 
+      "name": "user1",
+      "title":"Post One",
+      "email": "user1@gmail.com", 
+      "password":1234
+    }
     ],
 
     "Product":[
@@ -40,4 +45,6 @@
         "percent": null
       }
     ]
+
+
   }

@@ -21,10 +21,11 @@
   .timer p {
     color:#fff;
     position: absolute;
-    top: 20;
+    top: 18;
     left: 50;
     font-size: 10px;
     color: black;
+    padding-left: 2px;
   }
   
   

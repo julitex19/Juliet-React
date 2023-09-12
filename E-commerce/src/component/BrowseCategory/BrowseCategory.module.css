@@ -1,0 +1,38 @@
+.container{
+    margin: 100px;
+}
+
+
+.box{
+border: 1px solid gray;
+width: 130px;
+height: 110px;
+border-radius: 4px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 20px;
+}
+
+.imgs{
+    font-size:55px;
+}
+.box p{
+    font-size: 20px;
+
+}
+
+.box:hover{
+    background:#DB4443;
+    border: none;
+
+    .imgs{
+        color: white;
+    }
+    
+    .text{
+        color: white;
+    }
+
+}

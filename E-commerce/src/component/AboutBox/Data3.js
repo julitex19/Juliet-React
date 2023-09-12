@@ -4,14 +4,14 @@ export const AbtBox = [
     {
         id: 1,
         texth1:'10.5K',
-        textp:'Sallers active our site',
+        textp:'Sellers active our site',
         img:'GiFamilyHouse'
     },
 
     {
         id: 2,
         texth1:'33K',
-        textp:'Mopnthly Produduct Sale',
+        textp:'Monthly Produduct Sale',
         img: 'PiCurrencyCircleDollar'
     },
 
@@ -25,7 +25,7 @@ export const AbtBox = [
     {
         id: 4,
         texth1:'25K',
-        textp:'Anual gross sale in our site',
+        textp:'Annual gross sale on our site',
         img: 'TbMoneybag'
     }
 ]
