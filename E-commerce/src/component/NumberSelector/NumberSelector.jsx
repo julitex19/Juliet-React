@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styles from './NumberSelector.module.css'
 
-function NumberSelector() {
-  const [value, setValue] = useState(2);
+function NumberSelector({qty}) {
+  const [value, setValue] = useState(qty);
   
   const handleValueChange = (event) => {
     setValue(event.target.value);

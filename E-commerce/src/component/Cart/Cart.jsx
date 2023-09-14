@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useContext} from "react";
 import styles from "./Cart.module.css";
 import { Link } from "react-router-dom";
-import { Selected } from '../CartContent/Data'
-import Cartcontent from "../CartContent/Cartcontent";
+import { GlobalContext } from "../../context";
+import NumberSelector from "../NumberSelector/NumberSelector";
 
 function Cart() {
+  const {cart} = useContext(GlobalContext)
   return (
     <div>
       <div className={styles.modal_item}>
@@ -13,22 +14,34 @@ function Cart() {
           <span>Cart</span>
         </div>
 
-        <div className={styles.items}>
-          <div className={styles.product_items}>
-            <ul>
-              <li>Product</li>
-              <li>Price</li>
-              <li>Quantity</li>
-              <li>Subtotal</li>
-            </ul>
-          </div>
-          <div >
-            
-            {Selected && Selected.map((items)=>{
-              return <Cartcontent key={items.id} content={items}/>
+        <table className={styles.cartTable}>
+      <thead className={styles.tableHead}>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+      </tr>
+      </thead>
+      <tbody>
+      {cart.map((item)=>{
+              return <tr>
+                <td>
+                  <div className={styles.productDesc}>
+                    <img src={item.image} alt="" className={styles.productDescImage} />
+                    <p className="">{item.description}</p>
+                  </div>
+                </td>
+                <td>{item.price}</td>
+                <td><NumberSelector qty={item.qty} /></td>
+                <td>{item.amount}</td>
+              </tr>
             })}
-            </div>
+      </tbody>
 
+    </table>
+
+        <div className={styles.items}>
           <div className={styles.modal_ibtn}>
             <button>Return To Shop</button>
             <button>Update Cart</button>

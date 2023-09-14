@@ -1,25 +1,37 @@
 import React from 'react'
 import styles from "./box.module.css"
 import Percentage from './Percentage';
+import { GlobalContext } from '../../context';
 
 const percentMaped = {
   Percentage:Percentage,
 };
 
-const Box = ({ products }) => {
-  const {image, title, price, oldPrice, percent} = products
+const Box = ({ product }) => {
+  const {image, title, price, oldPrice, percent} = product
   const PercentComp = percentMaped[percent];
+
+   const {addToCart, removeFromCart, cart} = React.useContext(GlobalContext)
+
+   const handleAddToCart=()=>{
+const check = cart.find(item=> item.id === product.id)
+    const data = {
+      ...product,
+      qty:  check ? check.qty += 1 : 1
+    }
+    addToCart(data)
+   }
   return (
     <div className={styles.wishlist}>
 
       <div className={styles.product}>
           <div className={styles.product_box}>
             <img src={image} alt="" />
-            <div className={styles.cart}>
+            <div className={styles.cart} onClick={handleAddToCart}>
               <img src="./e-images/white-cart.svg" alt="" />
               <span>Add To Cart</span>
             </div>
-            <div className={styles.position}>
+            <div className={styles.position} onClick={()=>removeFromCart(product.id)}>
             {PercentComp && <PercentComp />}
             <img src="./e-images/Ellipse 13.png" alt="" className={styles.elipse} />
               <img src="./e-images/icon-delete.svg" alt="" className={styles.delete}/>

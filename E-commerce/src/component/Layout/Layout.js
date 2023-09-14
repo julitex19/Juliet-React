@@ -8,8 +8,10 @@ function Layout( { children, Favourite, BuyCart, User}) {
     <div>
         <div>
         <Advert/>
-        <Nav Favourite={Favourite} BuyCart={BuyCart} User={User} />
-        </div>
+        <div className='navigation'>
+        <Nav Favourite={Favourite} BuyCart={BuyCart} User={User}/>
+       </div> 
+       </div>
         <div>
             {children}
         </div>

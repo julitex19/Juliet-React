@@ -8,7 +8,7 @@ import { GlobalContext } from "../../context";
 
 const HeroPage = () => {
   // destructuring products and productApi function from context.js's global context using use context hook
-  const products = useContext(GlobalContext);
+  const {products} = useContext(GlobalContext);
 
   return (
     <div>
@@ -21,7 +21,7 @@ const HeroPage = () => {
         <div className={styles.wishlist}>
           {products &&
             products.map((items) => {
-              return <Box key={items.id} products={items} />;
+              return <Box key={items.id} product={items} />;
             })}
         </div>
 

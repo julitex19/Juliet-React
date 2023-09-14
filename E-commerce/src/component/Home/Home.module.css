@@ -127,6 +127,30 @@
   margin: 100px;
 }
 
+.central{
+  margin: 0 100px;
+}
+
+.explore h1{
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.our_products{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.wishlist {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+} 
+
 .AboutBox_outerD {
   display: flex;
   justify-content: center;

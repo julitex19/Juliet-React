@@ -137,3 +137,26 @@ ul{
     border: none;
     margin-left: 80px;
   }
+
+  .cartTable {
+    width: 100%;
+
+  }
+
+  .tableHead {
+    text-align: left;
+  }
+  .productDesc {
+    display: flex;
+    padding-bottom: 20px;
+  }
+  .productDesc > img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  } 
+  .productDesc > p {
+    font-size: 12px;
+    max-width: 400px;
+    margin-left: 20px;
+  }

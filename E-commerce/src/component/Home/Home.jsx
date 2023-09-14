@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { useContext } from "react";
 import styles from "./Home.module.css";
 import PictureSlide from "../PictureSlide/PictureSlide";
 import { BsApple, BsArrowRight, BsArrowLeft } from "react-icons/bs";
@@ -11,8 +12,11 @@ import Categories from "../Categories/Categories";
 import NewArrival from "../NewArrival/NewArrival";
 import BrowseCategory from "../BrowseCategory/BrowseCategory";
 import { CategoryBox } from "../BrowseCategory/Datas";
+import { GlobalContext } from "../../context";
+import Box from "../Box/box";
 
 const Home = () => {
+  const {products} = useContext(GlobalContext);
   return (
     <>
       <div className={styles.container}>
@@ -73,6 +77,34 @@ const Home = () => {
 
       <div className={styles.line}></div>
       <Categories />
+
+        <div>
+          <div className={styles.central}>
+          <div className={styles.intro2}>
+          <div className={styles.intro2_flex}>
+            <button className={styles.btn}></button>
+            <h4>Our products</h4>
+          </div>
+        </div>
+       <div className={styles.our_products}>
+       <div className={styles.explore}><h1>Explore our product</h1></div>
+        <div className={styles.arrow_flexed}>
+            <div className={styles.contain}>
+              <BsArrowLeft className={styles.arrow} />
+            </div>
+            <div className={styles.contain}>
+              <BsArrowRight className={styles.arrow} />
+            </div>
+          </div>
+       </div>
+          </div>
+      <div className={styles.wishlist}>
+          {products && products.map((items) => {
+              return <Box key={items.id} product={items} />;
+            })}
+        </div>
+        </div>
+
       <NewArrival />
       <div className={styles.AboutBox_outerD}>
         {AbtDeliv &&

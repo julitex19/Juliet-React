@@ -12,7 +12,7 @@ const Nav = ({Favourite, BuyCart, User}) => {
 
 
   return (
-    <div className={styles.parent_div}>
+    <div className={styles.parent_div} navigation>
       <nav className={styles.nav}>
         <div className={styles.nav_right}>
           {/* <h2>Exclusive</h2> */}
