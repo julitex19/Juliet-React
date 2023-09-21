@@ -12,10 +12,9 @@ const Nav = ({Favourite, BuyCart, User}) => {
 
 
   return (
-    <div className={styles.parent_div} navigation>
+   
       <nav className={styles.nav}>
-        <div className={styles.nav_right}>
-          {/* <h2>Exclusive</h2> */}
+        <div className={styles.nav_right} nav>
           <img src="./e-images/xclusive.jpeg" alt="" />
         </div>
         <div className={styles.navmiddle_end}>
@@ -61,7 +60,7 @@ const Nav = ({Favourite, BuyCart, User}) => {
         </div>
         <FaBars className={styles.Bars} />
       </nav>
-    </div>
+    
   );
 };
 

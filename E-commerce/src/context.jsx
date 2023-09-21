@@ -7,11 +7,12 @@ export const GlobalContext = React.createContext();
 const Provider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([])
+  const [Favourite, setFavourite] = useState([])
 
 
   useEffect(() => {
     const productApi = () => {
-      fetch("https://fakestoreapi.com/products")
+      fetch("http://localhost:3004/Product")
       .then((res) => res.json())
       .then((data) => setProducts(data));
     };

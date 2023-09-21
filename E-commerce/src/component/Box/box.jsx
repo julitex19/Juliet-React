@@ -8,7 +8,7 @@ const percentMaped = {
 };
 
 const Box = ({ product }) => {
-  const {image, title, price, oldPrice, percent} = product
+  const {img, title, price, oldPrice, percent} = product
   const PercentComp = percentMaped[percent];
 
    const {addToCart, removeFromCart, cart} = React.useContext(GlobalContext)
@@ -26,7 +26,7 @@ const check = cart.find(item=> item.id === product.id)
 
       <div className={styles.product}>
           <div className={styles.product_box}>
-            <img src={image} alt="" />
+            <img src={img} alt="" />
             <div className={styles.cart} onClick={handleAddToCart}>
               <img src="./e-images/white-cart.svg" alt="" />
               <span>Add To Cart</span>
