@@ -6,6 +6,8 @@ function Provider({children}) {
     const [fruits, setFruits] = useState([])
     const [name] = useState({firstName:'Juliet', lastName:'Obi'})
     const [mode, setMode] = useState('light')
+
+
     const toggleMode=()=>{
         if(mode === 'light'){
             setMode('dark')
@@ -13,6 +15,8 @@ function Provider({children}) {
             setMode('light')
         }
     }
+
+    
     const data = {
         fruits,
         name,
